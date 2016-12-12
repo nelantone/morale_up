@@ -8,9 +8,9 @@
 
 require 'csv'
 
-CSV.foreach('lib/seeds/sample_quotes.csv') do |row|
+puts 'starting import CSV'
+CSV.foreach('lib/seeds/sample_quotes.csv', col_sep: ';', return_headers: false ) do |row|
   Quote.create({quote: row[0], author: row[1], genre: row[2]})
-  puts "The '#{row[0]}' from #{row[1]} , genre: # #{row[2]} it's saved"
 end
 
 puts "There are now #{Quote.count} rows in the quotes table"
