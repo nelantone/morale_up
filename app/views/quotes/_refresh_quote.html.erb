@@ -1,2 +1,15 @@
-<%= "# #{@sample_quote.id}  \" #{@sample_quote.quote}\", #{@sample_quote.author} # #{@sample_quote.genre}" %>
+<div id="quote_num">
+  <p><%= "#{@sample_quote.id}-." %></p>
+</div>
 
+<div id="quote">
+  <p><%= @sample_quote.quote %></p>
+</div>
+
+<div id="author">
+  <p><%= @sample_quote.author %></p>
+</div>
+
+<div id="genre">
+  <p><%= "\##{@sample_quote.genre}" %></p>
+</div>

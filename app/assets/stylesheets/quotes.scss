@@ -1,3 +1,32 @@
 // Place all the styles related to the Quotes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    font-family: sans-serif;
+}
+
+#body_title {
+  position: absolute;
+  left: 30%;
+  top: 10%;
+}
+
+#body_center {
+    height: 10em;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#quote_num {
+  font-size: 11px;
+}
+
+#quote {
+  font-size: 17px;
+}
