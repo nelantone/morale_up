@@ -33,10 +33,17 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# REPL, local/instance variable inspection, pretty stack frame names
+gem "binding_of_caller"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#postgreSQL
 gem 'pg'
+
+# Feed RSS multimedia parser
+gem 'urss', '~> 0.3.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,8 +51,9 @@ group :development, :test do
   # Rspec for rails
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
-  gem "factory_girl_rails", "~> 4.0"
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'pry-byebug'
+  gem 'better_errors'
 end
 
 
