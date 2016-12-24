@@ -1,24 +1,28 @@
-<div id="body_title">
-  <h1>Every 10 minutes quote</h1>
-</div>
-<div id="body_center">
-  <div id="random_quote">
-    <%= render partial: 'refresh_quote', locals: { sample_quote: @sample_quote } %>
-  </div>
-  <script>
-  $(document).ready(function () {
-      // will call refresh partial every 10 min
-      setInterval(refreshPartial, 1000 * 60 * 10)
-  });
 
-  function refreshPartial() {
-    $.ajax({
-      type: "GET",
-      url: "refresh_quote",
-      success: function(data) {
-        document.getElementById('random_quote').innerHTML = data
+  <div id="body_title">
+    <h1>Every 10 minutes quote</h1>
+  </div>
+  <div id="body_center">
+    <div id="random_quote">
+      <%= render partial: 'refresh_quote', locals: { sample_quote: @sample_quote } %>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // will call refresh partial every 10 min
+        setInterval(refreshPartial, 1000 * 60 * 10)
+      });
+
+      function refreshPartial() {
+        $.ajax({
+          type: "GET",
+          url: "refresh_quote",
+          success: function(data) {
+            document.getElementById('random_quote').innerHTML = data
+          }
+        });
       }
-   });
-  }
-  </script>
-</div>
+    </script>
+  </div>
+<script>
+  $('#refresh_bg').css("background-image", "url('<%= random_flickr_rrs %>')");
+</script>

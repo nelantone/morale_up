@@ -1,20 +1,26 @@
 // Place all the styles related to the Quotes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+<% environment.context_class.instance_eval { include QuotesHelper } %>
+body,
+#refresh_bg {
+    background-image: url(<%= random_flickr_rrs %>);
+}
 
-body {
-    font-family: sans-serif;
+html {
+    font-family: arial;
+    font-size: 26px;
 }
 
 #random_quote {
-  margin-left: 15%;
-  margin-right: 20%;
+    margin-left: 15%;
+    margin-right: 20%;
 }
 
 #body_title {
-  position: absolute;
-  left: 35%;
-  top: 5%;
+    position: absolute;
+    left: 35%;
+    top: 5%;
 }
 
 #body_center {
@@ -29,12 +35,12 @@ body {
 }
 
 #quote_num {
-  font-size: 13px;
+    font-size: 13px;
 }
 
 #quote,
 #genre,
 #author {
-  font-size: 27px;
-  line-height: 40px;
+    font-size: 27px;
+    line-height: 40px;
 }
