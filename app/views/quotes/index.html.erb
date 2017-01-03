@@ -9,7 +9,7 @@
     <script>
       $(document).ready(function () {
         // will call refresh partial every 10 min
-        setInterval(refreshPartial, 1000 * 60 * 10)
+        setInterval(refreshPartial, 1000 * 60 * 10 )
       });
 
       function refreshPartial() {
@@ -17,12 +17,9 @@
           type: "GET",
           url: "refresh_quote",
           success: function(data) {
-            document.getElementById('random_quote').innerHTML = data
+            document.getElementById('random_quote article-bg').innerHTML = data
           }
         });
       }
     </script>
   </div>
-<script>
-  $('#refresh_bg').css("background-image", "url('<%= random_flickr_rrs %>')");
-</script>

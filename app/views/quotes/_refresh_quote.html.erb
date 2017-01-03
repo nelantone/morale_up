@@ -1,15 +1,20 @@
-<div id="quote_num">
-  <p><%= "#{@sample_quote.id}-." %></p>
-</div>
 
-<div id="quote">
-  <p><%= @sample_quote.quote %></p>
-</div>
+<img src="<%= random_flickr_rrs %>" class="article-bg">
 
-<div id="author">
-  <p><%= @sample_quote.author %></p>
-</div>
+<div id= "current_quote">
+  <div id="quote_num">
+    <p><%= "#{@sample_quote.id}-." %></p>
+  </div>
 
-<div id="genre">
-  <p><%= "\##{@sample_quote.genre}" %></p>
+  <div id="quote">
+    <p><%= @sample_quote.quote %></p>
+  </div>
+
+  <div id="author">
+    <p><%= @sample_quote.author %></p>
+  </div>
+
+  <div id="genre">
+    <p><%= "\##{@sample_quote.genre}" %></p>
+  </div>
 </div>
